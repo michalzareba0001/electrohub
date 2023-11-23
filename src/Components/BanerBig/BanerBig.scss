@@ -1,0 +1,48 @@
+.banner-big{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+
+.banner-big .banner-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    h2{
+        color: rgb(238, 215, 5);
+        font-weight: 800;
+        font-size: 50px;
+        text-shadow: 0px 0px 10px #ffffff;
+    }
+
+    h3{
+        color: #ffffff;
+    }
+    p{
+        color:#ffffff;
+        font-weight: 300;
+    }
+}
+
+.banner-big .banner-right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: auto;
+            height: 65%;
+        }
+
+    }
+}

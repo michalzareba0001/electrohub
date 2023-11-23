@@ -1,0 +1,92 @@
+.navbar{
+    width: 1366px;
+    display: flex;
+    flex-direction: row;
+}
+
+.page-logo{
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main-menu{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.user-panel{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.page-logo img{
+    height: 80px;
+    width: auto;
+}
+.page-logo .yellow{
+    color:rgb(238, 215, 5);
+}
+
+.main-menu ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main-menu .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 600;
+    height: 80px;
+}
+.main-menu li{
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-menu li{
+    background-color: #ffffff;
+    transition: all 600ms;
+    border-radius: 50%;
+}
+
+.main-menu li:hover{
+    background-color: rgb(238, 215, 5);
+    border-radius: 0%;
+}
+
+.user-panel .login-icon,
+.user-panel .cart-icon{
+    width: 50px;
+    height: auto;
+    border-radius: 0%;
+    background-color: #ffffff;
+    color: #000000;
+    transition: all 600ms;
+    padding: 15px;
+}
+
+
+.user-panel .login-icon:hover,
+.user-panel .cart-icon:hover{
+    border-radius: 50%;
+    background-color: rgb(238, 215, 5);
+}
+
