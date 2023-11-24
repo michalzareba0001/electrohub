@@ -35,18 +35,19 @@ const Nowosci = () => {
       <h2>Nowości</h2>
       <div className='products-grid'>
         {products.map(product => (
-          <Link to={`product1/${product.id}`} className='product-link' key={product.id}>
-            <div className='single-product'>
-              <h2>{product.name}</h2>
+          <Link to={`product/${product.id}`} className='product-link' key={product.id}>
+            <div className='product'>
+              <h2 className='product-name'>{product.name}</h2>
+                <div className='img-div'>
               <img src={product.images[0].src} alt='product' className='product-img' />
-              <p>
-                Regular price: {product.regular_price}
-                <span className='sale'>SALE: {product.sale_price}</span>
+              </div>
+              <p className='product-price'>
+                Cena: {product.price} zł
               </p>
-              <p>
-                Product categories:
+              <p className='product-category'>
+                Kategoria:
                 {product.categories.map(category => (
-                  <span key={category.id}>{category.name}</span>
+                  <span key={category.id}> {category.name}</span>
                 ))}
               </p>
               <p className='short-description' dangerouslySetInnerHTML={{ __html: product.short_description }}></p>

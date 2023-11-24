@@ -10,11 +10,13 @@ import cartIcon from '../../Assets/shopping-bag.svg'
 const Navbar = () => {
     return (
         <div className='navbar'>
+            <Link to='/' alt='home page' className='page-logo-link'>
             <div className='page-logo'>
                 <img src={logo} alt='electro hub logo' />
                 <h1><span className='yellow'>ELECTRO</span> HUB</h1>
 
             </div>
+            </Link>
             <div className='main-menu'>
                 <ul>
                     <li> <Link to='/' className='nav-link'>Strona główna</Link></li>
