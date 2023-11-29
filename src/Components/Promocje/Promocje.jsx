@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './Rtv.css';
+import './Promocje.css';
 
-const Rtv = () => {
+const Promocje = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -17,12 +17,12 @@ const Rtv = () => {
       },
     })
       .then(response => {
-        // Filtruj tylko produkty z kategorii RTV
-        const rtvProducts = response.data.filter(product =>
-          product.categories.some(category => category.slug === 'rtv')
+        // Filtruj tylko produkty w promocji
+        const promotionProducts = response.data.filter(product =>
+          product.on_sale
         );
 
-        setProducts(rtvProducts);
+        setProducts(promotionProducts);
         setLoading(false);
       })
       .catch(error => {
@@ -36,32 +36,21 @@ const Rtv = () => {
   }
 
   return (
-    <div className='rtv'>
-      <h2>RTV</h2>
+    <div className='promocje'>
+      <h2>Promocje</h2>
       <div className='products-grid'>
         {products.map(product => (
           <Link to={`product/${product.id}`} className='product-link' key={product.id}>
             <div className='product'>
               <h3 className='product-name'>{product.name}</h3>
               <div className='img-div'>
-              {product.on_sale ? (
-                    <div className='promo-icon'>
-                      %
-                    </div>
-                  ):
-                  (<></>)}
                 <img src={product.images[0].src} alt='product' className='product-img' />
               </div>
-              <p className='product-price'>
-                Cena: 
-              {product.on_sale ? (
-                  <>
-                    <p className='regular-price'>{product.regular_price} zł</p>
-                    <p className='sale-price'>{product.sale_price} zł</p>
-                  </>
-                ) : (
-                  <p>{product.price} zł</p>
-                )}
+              <p className='product-regular-price'>
+                Cena standardowa: {product.regular_price} zł
+              </p>
+              <p className='product-sale-price'>
+                Cena promocyjna: <span>{product.sale_price} zł</span>
               </p>
               <p className='product-category'>
                 Kategoria:
@@ -78,4 +67,4 @@ const Rtv = () => {
   );
 };
 
-export default Rtv;
+export default Promocje;

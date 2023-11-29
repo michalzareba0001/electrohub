@@ -1,3 +1,42 @@
-.about-us{
-    width: 1360px;
+.about-us {
+  width: 1140px;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
+.about-us .about-us-left {
+  width: 50%;
+  padding-right: 40px;
+}
+.about-us .about-us-left h2 {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: rgb(238, 215, 5);
+}
+.about-us .about-us-left p {
+  padding-top: 10px;
+}
+.about-us .about-us-left h3 {
+  padding-top: 15px;
+}
+.about-us .about-us-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-us .about-us-right button {
+  font-size: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  background-color: rgb(238, 215, 5);
+  border-radius: 15px;
+  cursor: pointer;
+  float: right;
+}
+.about-us .about-us-right button:hover {
+  background-color: #000000;
+  color: rgb(238, 215, 5);
+}/*# sourceMappingURL=AboutUs.css.map */

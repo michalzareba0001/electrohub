@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './BanerBig.css';
 
-const BanerBig = () => {
+const BanerBig = ({ currentIndex }) => {
     const [bannerData, setBannerData] = useState(null);
     const [featuredMediaUrl, setFeaturedMediaUrl] = useState(null);
     const [additionalImageUrl, setAdditionalImageUrl] = useState(null);
-    const [currentIndex, setCurrentIndex] = useState(2);
+    
 
     useEffect(() => {
         const fetchBannerData = async () => {

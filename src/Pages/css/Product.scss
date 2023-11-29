@@ -44,6 +44,22 @@
             font-size: 50px;
             text-transform: uppercase;
             color: rgb(238, 215, 5);
+            position: relative;
+        }
+        .promo-icon{
+            color: #ffffff;
+            background-color: #ff0000;
+            width: 45px;
+            height: 45px;
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 100;
         }
         .product-category{
             font-size: 20px;
@@ -63,6 +79,13 @@
         .product-price{
             font-size: 30px;
             font-weight: 900;
+            .regular-price{
+                font-weight: 400;
+                text-decoration: line-through;
+            }
+            .sale-price{
+                color: #ff0000;
+            }
         }
 
         .product-description{

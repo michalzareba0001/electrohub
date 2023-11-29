@@ -1,3 +1,127 @@
-.shop{
-    width: 1360px;
+.shop {
+  width: 1140px;
 }
+.shop .shop-grid {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+.shop .shop-grid .shop-left {
+  grid-column: 1/2;
+}
+.shop .shop-grid .shop-left h2 {
+  padding-top: 20px;
+}
+.shop .shop-grid .shop-left ul {
+  list-style: none;
+}
+.shop .shop-grid .shop-left ul li {
+  padding-top: 5px;
+}
+.shop .shop-grid .shop-left ul li .category-link {
+  cursor: pointer;
+}
+.shop .shop-grid .shop-left ul li .category-link:hover {
+  color: rgb(238, 215, 5);
+}
+.shop .shop-grid .shop-left .cena-container {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  padding-top: 10px;
+}
+.shop .shop-grid .shop-left .cena-container .cena-group {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.shop .shop-grid .shop-left .cena-container .cena-group input {
+  width: 55%;
+  font-size: 16px;
+}
+.shop .shop-grid .shop-right {
+  grid-column: 2/3;
+}
+.shop .shop-grid .shop-right .products-grid {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+}
+.shop .shop-grid .shop-right .products-grid .product-link {
+  text-decoration: none;
+  color: #000000;
+  width: 100%;
+  padding: 10px;
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1254901961);
+  height: 450px;
+  overflow: hidden;
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product .product-name {
+  font-size: 20px;
+  height: 70px;
+  overflow: hidden;
+  color: rgb(238, 215, 5);
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product .img-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px 30px 0px;
+  position: relative;
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product .img-div img {
+  height: 200px;
+  transition: all 700ms;
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product .img-div .promo-icon {
+  color: #ffffff;
+  background-color: #ff0000;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 100;
+  font-weight: 600;
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product .product-price {
+  height: 35px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0px 0px 0px;
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product .product-price span {
+  padding-left: 5px;
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product .product-price .regular-price {
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product .product-price .sale-price {
+  color: #ff0000;
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product .product-category {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0px 0px 10px 0px;
+  color: rgb(238, 215, 5);
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product .short-description {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0px 0px 10px 0px;
+  height: 73px;
+  overflow: hidden;
+}
+.shop .shop-grid .shop-right .products-grid .product-link .product:hover img {
+  transform: scale(1.1);
+}/*# sourceMappingURL=Shop.css.map */

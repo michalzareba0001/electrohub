@@ -12,33 +12,38 @@ import Login from './Pages/Login'
 import Register from './Pages/Register'
 import UserPanel from './Pages/UserPanel'
 import { UserProvider } from './Context/UserContext'
+import { CartProvider } from './Context/CartContext'
 
 
 
 function App() {
   return (
     <div className="App">
-      <UserProvider>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<HomePage />} index />
-            <Route path='/shop' element={<Shop />} />
-            <Route path='/aboutus' element={<AboutUs />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/product' element={<Product />}>
-              <Route path=':id' element={<Product />} />
-            </Route>
+      <CartProvider>
+        <UserProvider>
 
-            <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/userpanel' element={<UserPanel />} />
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<HomePage />} index />
+              <Route path='/shop' element={<Shop />} />
+              <Route path='/aboutus' element={<AboutUs />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/product' element={<Product />}>
+                <Route path=':id' element={<Product />} />
+              </Route>
 
-          </Routes>
-          <Footer />
-        </BrowserRouter>
-      </UserProvider>
+              <Route path='/login' element={<Login />} />
+              <Route path='/register' element={<Register />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path='/userpanel' element={<UserPanel />} />
+
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+
+        </UserProvider>
+      </CartProvider>
     </div >
   );
 }

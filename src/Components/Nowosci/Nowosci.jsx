@@ -39,10 +39,24 @@ const Nowosci = () => {
             <div className='product'>
               <h2 className='product-name'>{product.name}</h2>
                 <div className='img-div'>
+                  {product.on_sale ? (
+                    <div className='promo-icon'>
+                      %
+                    </div>
+                  ):
+                  (<></>)}
               <img src={product.images[0].src} alt='product' className='product-img' />
               </div>
               <p className='product-price'>
-                Cena: {product.price} zł
+                Cena: 
+              {product.on_sale ? (
+                  <>
+                    <p className='regular-price'>{product.regular_price} zł</p>
+                    <p className='sale-price'>{product.sale_price} zł</p>
+                  </>
+                ) : (
+                  <p>{product.price} zł</p>
+                )}
               </p>
               <p className='product-category'>
                 Kategoria:

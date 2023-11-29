@@ -42,6 +42,7 @@ const Register = () => {
       );
 
       const newUser = response.data;
+      console.log('Nowy użytkownik:', newUser)
 
       // Tutaj możesz zrobić coś z nowym użytkownikiem, np. przechować go w stanie aplikacji
       alert('Udało się zarejestrować.');

@@ -1,3 +1,85 @@
-.contact{
-    width: 1360px;
+.contact {
+  width: 1140px;
 }
+.contact .contact-main {
+  width: 100%;
+  display: flex;
+  padding-top: 40px;
+}
+.contact .contact-main .contact-left {
+  width: 30%;
+  padding-right: 40px;
+  border-right: 2px solid rgb(238, 215, 5);
+}
+.contact .contact-main .contact-left .contact-adres,
+.contact .contact-main .contact-left .contact-tel,
+.contact .contact-main .contact-left .contact-mail {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1254901961);
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.contact .contact-main .contact-left .contact-adres h4,
+.contact .contact-main .contact-left .contact-tel h4,
+.contact .contact-main .contact-left .contact-mail h4 {
+  margin-bottom: 10px;
+}
+.contact .contact-main .contact-left .contact-adres a,
+.contact .contact-main .contact-left .contact-tel a,
+.contact .contact-main .contact-left .contact-mail a {
+  color: #000000;
+}
+.contact .contact-main .contact-left .contact-adres a:hover,
+.contact .contact-main .contact-left .contact-tel a:hover,
+.contact .contact-main .contact-left .contact-mail a:hover {
+  color: rgb(238, 215, 5);
+}
+.contact .contact-main .contact-right {
+  width: 70%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.contact .contact-main .contact-right .contact-form {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1254901961);
+  padding: 40px;
+  height: 100%;
+  border-radius: 20px;
+}
+.contact .contact-main .contact-right .contact-form .form-group {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+.contact .contact-main .contact-right .contact-form .form-group label {
+  width: 20%;
+}
+.contact .contact-main .contact-right .contact-form .form-group textarea {
+  width: 60%;
+  height: 160px;
+}
+.contact .contact-main .contact-right button {
+  font-size: 20px;
+  margin-bottom: 40px;
+  margin-right: 100px;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  background-color: rgb(238, 215, 5);
+  border-radius: 15px;
+  cursor: pointer;
+  float: right;
+}
+.contact .contact-main .contact-right button:hover {
+  background-color: #000000;
+  color: rgb(238, 215, 5);
+}
+.contact .contact-mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.contact .contact-mapa h2 {
+  margin-bottom: 20px;
+}/*# sourceMappingURL=Contact.css.map */

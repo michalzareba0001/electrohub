@@ -1,45 +1,41 @@
-.nowosci {
+.agd {
   padding-top: 20px;
   padding-bottom: 20px;
   width: 1140px;
 }
-.nowosci .products-grid {
+.agd .products-grid {
   width: 100%;
   overflow: hidden;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
 }
-.nowosci .products-grid .product-link {
+.agd .products-grid .product-link {
   text-decoration: none;
   color: #000000;
   width: 100%;
   padding: 10px;
 }
-.nowosci .products-grid .product-link .product {
+.agd .products-grid .product-link .product {
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1254901961);
   height: 600px;
   overflow: hidden;
 }
-.nowosci .products-grid .product-link .product .product-name {
+.agd .products-grid .product-link .product .product-name {
   font-size: 30px;
   height: 110px;
   overflow: hidden;
   color: rgb(238, 215, 5);
 }
-.nowosci .products-grid .product-link .product .img-div {
+.agd .products-grid .product-link .product .img-div {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 30px 0px 30px 0px;
   position: relative;
 }
-.nowosci .products-grid .product-link .product .img-div img {
-  height: 200px;
-  transition: all 700ms;
-}
-.nowosci .products-grid .product-link .product .img-div .promo-icon {
+.agd .products-grid .product-link .product .img-div .promo-icon {
   color: #ffffff;
   background-color: #ff0000;
   position: absolute;
@@ -54,32 +50,36 @@
   z-index: 100;
   font-weight: 600;
 }
-.nowosci .products-grid .product-link .product .product-price {
+.agd .products-grid .product-link .product .img-div img {
+  height: 200px;
+  transition: all 700ms;
+}
+.agd .products-grid .product-link .product .product-price {
   height: 70px;
   font-size: 16px;
   font-weight: 600;
   padding: 10px 0px 0px 0px;
 }
-.nowosci .products-grid .product-link .product .product-price .regular-price {
+.agd .products-grid .product-link .product .product-price .regular-price {
   font-weight: 400;
   text-decoration: line-through;
 }
-.nowosci .products-grid .product-link .product .product-price .sale-price {
+.agd .products-grid .product-link .product .product-price .sale-price {
   color: #ff0000;
 }
-.nowosci .products-grid .product-link .product .product-category {
+.agd .products-grid .product-link .product .product-category {
   font-size: 18px;
   font-weight: 400;
   padding: 0px 0px 10px 0px;
   color: rgb(238, 215, 5);
 }
-.nowosci .products-grid .product-link .product .short-description {
+.agd .products-grid .product-link .product .short-description {
   font-size: 16px;
   font-weight: 400;
   padding: 0px 0px 10px 0px;
   height: 73px;
   overflow: hidden;
 }
-.nowosci .products-grid .product-link .product:hover img {
+.agd .products-grid .product-link .product:hover img {
   transform: scale(1.1);
-}/*# sourceMappingURL=Nowosci.css.map */
+}/*# sourceMappingURL=Agd.css.map */
