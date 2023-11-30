@@ -1,3 +1,4 @@
+// Importuj addToCart z useCart, a nie osobno
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -10,7 +11,7 @@ const Product = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const { addToCart } = useCart();
+  const { dispatch } = useCart();
 
   useEffect(() => {
     axios
@@ -33,7 +34,7 @@ const Product = () => {
 
   const handleAddToCart = () => {
     if (product) {
-      addToCart(product); 
+      dispatch({ type: 'ADD_TO_CART', payload: product });
       alert('Produkt dodany do koszyka!');
     }
   };

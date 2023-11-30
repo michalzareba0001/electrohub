@@ -19,8 +19,9 @@ import { CartProvider } from './Context/CartContext'
 function App() {
   return (
     <div className="App">
-      <CartProvider>
+      
         <UserProvider>
+          <CartProvider>
 
           <BrowserRouter>
             <Navbar />
@@ -41,9 +42,9 @@ function App() {
             </Routes>
             <Footer />
           </BrowserRouter>
-
+          </CartProvider>
         </UserProvider>
-      </CartProvider>
+      
     </div >
   );
 }

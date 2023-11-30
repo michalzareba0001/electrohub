@@ -81,4 +81,19 @@
 .product-page .product-right .product-description {
   font-size: 16px;
   line-height: 150%;
+}
+.product-page .product-right button {
+  font-size: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  border: none;
+  padding: 10px 15px 10px 15px;
+  background-color: rgb(238, 215, 5);
+  border-radius: 15px;
+  cursor: pointer;
+  float: right;
+}
+.product-page .product-right button:hover {
+  background-color: #000000;
+  color: rgb(238, 215, 5);
 }/*# sourceMappingURL=Product.css.map */
