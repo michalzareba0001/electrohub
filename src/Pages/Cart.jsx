@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCart } from '../Context/CartContext';
+import './css/Cart.css'
 
 const Cart = () => {
   const { cartState, dispatch } = useCart();
@@ -13,15 +14,15 @@ const Cart = () => {
   };
 
   return (
-    <div>
-      <h2>Koszyk</h2>
+    <div className='cart-page'>
+      <h1 className='cart-page-title'>Twój Koszyk: </h1>
       {cartState.items.length === 0 ? (
         <p>Koszyk jest pusty.</p>
       ) : (
         <ul>
           {cartState.items.map((item) => (
             <li key={item.id}>
-              {item.name} - {item.price} zł
+              {item.name} - {item.quantity} -{item.price} zł
               <button onClick={() => removeFromCart(item)}>Usuń</button>
             </li>
           ))}

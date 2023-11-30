@@ -1,8 +1,7 @@
-// Importuj addToCart z useCart, a nie osobno
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { useCart } from '../Context/CartContext'; 
+import { useCart } from '../Context/CartContext';
 
 import './css/Product.css';
 
@@ -10,6 +9,7 @@ const Product = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [quantity, setQuantity] = useState(1);
 
   const { dispatch } = useCart();
 
@@ -32,9 +32,14 @@ const Product = () => {
       });
   }, [id]);
 
+  const handleQuantityChange = (value) => {
+    const newQuantity = Math.max(1, Math.min(quantity + value, product.stock_quantity));
+    setQuantity(newQuantity);
+  };
+
   const handleAddToCart = () => {
     if (product) {
-      dispatch({ type: 'ADD_TO_CART', payload: product });
+      dispatch({ type: 'ADD_TO_CART', payload: { ...product, quantity } });
       alert('Produkt dodany do koszyka!');
     }
   };
@@ -83,9 +88,26 @@ const Product = () => {
         <hr />
         <p className='product-description'>Opis: <span dangerouslySetInnerHTML={{ __html: product.description }}></span></p>
         <hr />
-        
+
         {/* Przycisk "Dodaj do koszyka" */}
-        <button onClick={handleAddToCart}>Dodaj do koszyka</button>
+        <div className='add-to-cart-div'>
+          <div className='qty-div'>
+            <span className='qty-minus' onClick={() => handleQuantityChange(-1)}> - </span>
+            <input
+              id='productQty'
+              className='product-qty'
+              type='number'
+              value={quantity}
+              onChange={(e) => setQuantity(Math.min(e.target.value, product.stock_quantity))}
+              max={product.stock_quantity}
+              step='1'
+            />
+            <span className='qty-plus' onClick={() => handleQuantityChange(+1)}> + </span>
+          </div>
+          <div className='button-div'>
+            <button onClick={handleAddToCart}>Dodaj do koszyka</button>
+          </div>
+        </div>
       </div>
     </div>
   );
