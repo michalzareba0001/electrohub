@@ -12,7 +12,6 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1);
 
   const { dispatch } = useCart();
-
   useEffect(() => {
     axios
       .get(`https://wootest.scharmach.pl/wp-json/wc/v3/products/${id}`, {
@@ -30,24 +29,26 @@ const Product = () => {
         console.error(error);
         setLoading(false);
       });
-  }, [id]);
-
-  const handleQuantityChange = (value) => {
-    const newQuantity = Math.max(1, Math.min(quantity + value, product.stock_quantity));
-    setQuantity(newQuantity);
-  };
-
-  const handleAddToCart = () => {
-    if (product) {
-      dispatch({ type: 'ADD_TO_CART', payload: { ...product, quantity } });
-      alert('Produkt dodany do koszyka!');
+    }, [id]);
+    
+    const handleQuantityChange = (value) => {
+      const newQuantity = Math.max(1, Math.min(quantity + value, product.stock_quantity));
+      setQuantity(newQuantity);
+    };
+    
+    const handleAddToCart = () => {
+      if (product) {
+        dispatch({ type: 'ADD_TO_CART', payload: { ...product, quantity, stock_quantity, id } });
+        alert('Produkt dodany do koszyka!');
+      }
+    };
+    
+    if (loading) {
+      return <p>Loading...</p>;
     }
-  };
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
+    
+    const stock_quantity = product.stock_quantity
+    
   return (
     <div className='product-page'>
       <div className='product-left'>
@@ -55,8 +56,8 @@ const Product = () => {
           {product.images && product.images.length > 0 && (
             product.images.map(image => (
               <img key={image.id} src={image.src} alt={`product-${image.id}`} className='product-img' />
-            ))
-          )}
+              ))
+              )}
         </div>
       </div>
       <div className='product-right'>
@@ -66,7 +67,7 @@ const Product = () => {
               %
             </div>
           ) :
-            (<></>)}
+          (<></>)}
         </h1>
         <h2 className='product-category'>Kategoria: {product.categories.map(category => (
           <span key={category.id}>
